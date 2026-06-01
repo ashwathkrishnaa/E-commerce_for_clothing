@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>ASKR Profile</title>
+
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+
+<body>
+
+<section class="profile-page">
+
+    <div class="profile-box">
+
+
+        <!-- PROFILE IMAGE -->
+
+        <div class="profile-image">
+
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+
+
+
+        <!-- USER NAME -->
+
+        <h1 id="profileName"></h1>
+
+
+
+        <!-- USER EMAIL -->
+
+        <p id="profileEmail"></p>
+        <h2>Your Orders</h2>
+
+<div id="ordersList"></div>
+
+
+
+        <!-- PASSWORD -->
+
+        <h3 id="profilePassword" ></h3>
+
+
+
+        <a href="demo.pro.1.html">
+
+            <button>
+
+                Back To Home
+
+            </button>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+let currentUser =
+JSON.parse(
+localStorage.getItem("currentUser")
+);
+
+
+document.getElementById(
+"profileName"
+).innerHTML =
+currentUser.name;
+
+
+document.getElementById(
+"profileEmail"
+).innerHTML =
+currentUser.email;
+
+
+document.getElementById(
+"profilePassword"
+).innerHTML =
+"Password : ********";
+let orders =
+JSON.parse(
+localStorage.getItem(
+"orders"
+)) || [];
+
+let output = "";
+
+orders.forEach(item=>{
+
+output += `
+
+<h3>${item.name}</h3>
+
+<p>₹${item.price}</p>
+
+`;
+
+});
+
+document.getElementById(
+"ordersList"
+).innerHTML =
+output;
+</script>
+
+</body>
+</html>

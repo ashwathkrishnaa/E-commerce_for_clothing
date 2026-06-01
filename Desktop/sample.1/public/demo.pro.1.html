@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASKR Fashion</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div class="container">
+<header class="top-header">
+<div class="logo-box">
+<h2>Askr</h2>
+<img src="/images/logo.png" alt="logo">
+</div>
+
+<nav class="navbar">
+<a href="#">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+<a href="about.html">
+
+    AboutUs
+
+</a>
+</nav>
+
+<div class="search-section">
+<p>Search</p>
+<input type="text">
+</div>
+
+<div class="menu-links">
+
+<a href="men.html">Men</a>
+
+<a href="women.html">Women</a>
+
+<a href="child.html">Child</a>
+
+</div>
+
+<section class="hero-section">
+
+    <!-- HERO IMAGE -->
+
+    <img src="/images/hero.jpg.jpg"
+    alt="Fashion Banner"
+    class="hero-image">
+
+
+    <!-- DARK OVERLAY -->
+
+    <div class="overlay"></div>
+
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="hero-content">
+
+        <h2 id="welcomeUser"></h2>
+
+        <h1>
+            50% off on all clothes you buy
+        </h1>
+
+        <p>
+            | Limited Time Offer
+        </p>
+
+
+        <a href="login.html">
+
+            <button class="hero-btn">
+
+                Login
+
+            </button>
+
+        </a>
+
+    </div>
+    <div class="category-buttons">
+
+    <a href="men.html" class="category-btn">
+        Men
+    </a>
+
+    <a href="women.html" class="category-btn">
+        Women
+    </a>
+
+    <a href="child.html" class="category-btn">
+        Child
+    </a>
+
+</div>
+</section>
+
+<section class="category-section">
+<h2>Shop by Category</h2>
+
+<div class="category-grid">
+
+<div class="category-card">
+<img src="/images/denim.jpg" alt="denim">
+<h3>Denim</h3>
+</div>
+
+<div class="category-card">
+<img src="/images/women.jpg" alt="cotton">
+<h3>Cotton</h3>
+</div>
+
+</div>
+</section>
+
+<section class="trending-section">
+<h2>Trending Items</h2>
+
+<div class="trending-grid">
+
+<div class="trend-card">
+<img src="/images/men.jpg" alt="Men's Collection">
+</div>
+
+<div class="trend-card">
+<img src="/images/women.jpg" alt="Women's Collection">
+</div>
+
+<div class="trend-card">
+<img src="/images/denim.jpg" alt="Denim Collection">
+</div>
+
+<div class="trend-card">
+<img src="/images/boykid.jpg" alt="Boys Collection">
+</div>
+
+</div>
+</section>
+
+<footer class="bottom-navbar">
+
+    <a href="demo.pro.1.html">
+
+        <i class="fa-solid fa-house"></i>
+
+    </a>
+
+
+    <a href="#">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </a>
+
+
+    <a href="cart.html">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+    </a>
+
+
+    <a href="profile.html">
+
+        <i class="fa-regular fa-user"></i>
+
+    </a>
+
+</footer>
+</div>
+
+<script>
+let userName=localStorage.getItem("loggedInUser");
+
+if(userName){
+document.getElementById("welcomeUser").innerHTML="Welcome, "+userName;
+}
+</script>
+
+</body>
+</html>

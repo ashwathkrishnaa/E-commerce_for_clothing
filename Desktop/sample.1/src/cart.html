@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>ASKR Cart</title>
+
+    <link rel="stylesheet" href="cart.css">
+
+</head>
+
+<body>
+
+<section class="cart-page">
+
+    <div class="cart-box">
+
+        <h1>Your Cart</h1>
+
+        <p>
+            No products added yet.
+        </p>
+
+        <a href="demo.pro.1.html">
+
+            <button>
+
+                Continue Shopping
+
+            </button>
+
+        </a>
+
+    </div>
+
+</section>
+<div id="cartItems"></div>
+
+<button onclick="buyNow()">
+
+Buy Now
+
+</button>
+<script>
+
+let cart =
+JSON.parse(
+localStorage.getItem("cart")
+) || [];
+
+let output = "";
+
+cart.forEach(item=>{
+
+output += `
+
+<h3>${item.name}</h3>
+
+<p>₹${item.price}</p>
+
+<hr>
+
+`;
+
+});
+
+document.getElementById(
+"cartItems"
+).innerHTML = output;
+
+
+function buyNow(){
+
+localStorage.setItem(
+"orders",
+JSON.stringify(cart)
+);
+
+alert("Order Placed");
+
+localStorage.removeItem(
+"cart"
+);
+
+}
+
+</script>
+
+</body>
+</html>
